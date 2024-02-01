@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .space {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: start;
+        padding: 15px 30px;
+        border-radius: 20px;
+        gap: 10px;
+        width: 250px;
+        background-color: rgba(251, 251, 252, 0.877);
+      }
+      .navaradhi {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 120px;
+        border: 1px white solid;
+        background-color: white;
+        position: fixed;
+        padding: 15px;
+      }
+
+      .input {
+        border: none;
+        outline: none;
+        background: transparent;
+      }
+      .home {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        font-size: 18px;
+      }
+      #icon {
+        background: none;
+      }
+      .sol {
+        font-size: 20px;
+        border: 1px white solid;
+        background-color: white;
+        padding: 20px;
+        position: absolute;
+        bottom: 300px;
+        left: 250px;
+      }
+      .sol2 {
+        font-size: 20px;
+        border: 1px white solid;
+        background-color: white;
+        padding: 20px;
+        position: absolute;
+        bottom: 300px;
+        right: 250px;
+      }
+
+      .solution {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        padding: 10px;
+        position: relative;
+      }
+
+      .block-title {
+        font-family: sans-serif;
+        font-size: 15px;
+        padding: 50px;
+        font-family: 900px;
+      }
+      .hotel1 {
+        font-size: 20px;
+        color: grey;
+      }
+      .hotel {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+      }
+      .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+      }
+      .sale1 {
+        font-size: 30px;
+        padding: 5px;
+      }
+      .sale2 {
+        font-size: 17px;
+        padding: 5px;
+      }
+      .sale5 {
+        display: flex;
+        flex-direction: 6ow;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 40px;
+        margin-top: 100px;
+        color: white;
+        background-color: rgb(231, 124, 57);
+      }
+      .auto {
+        display: flex;
+        flex-direction: 6ow;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 40px;
+        color: white;
+        background-color: #473d3d;
+      }
+      .vedio {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+      }
+      .custom1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        font-family: sans-serif;
+        text-align: center;
+        gap: 20px;
+      }
+      .underline {
+        background-color: #f1722d;
+        width: 80px;
+        height: 1px;
+      }
+      .custom4 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding: 40px;
+      }
+      .testimonials2 {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .testimonials1 {
+        background-color: grey;
+        height: 1px;
+        width: 600px;
+      }
+      .testimonials {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+      }
+      .star11 {
+        padding: 0px;
+        font-size: 20px;
+        color: darkslategrey;
+      }
+      .star1 {
+        color: darkslategrey;
+      }
+      .star {
+        padding: 10px;
+        font-size: 20px;
+        color: orange;
+      }
+      .starpick {
+        border-radius: 50%;
+      }
+      .starscomplete {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding: 20px;
+      }
+      .stars10 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 2px grey solid;
+        padding: 10px;
+        position: relative;
+      }
+      .stars20 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 2px grey solid;
+        padding: 10px 60px;
+      }
+      .stars30 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 2px grey solid;
+        padding: 10px 80px;
+      }
+      .quick1 {
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+      }
+      .quick2 {
+        font-size: 20px;
+        border: 2px black solid;
+        padding: 15px;
+      }
+      .quick {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 300px;
+        background-color: #e77a3b;
+        padding: 25px;
+        margin-top: 90px;
+      }
+      .about2 {
+        font-size: 18px;
+        color: grey;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .about10 {
+        font-size: 20px;
+        color: white;
+      }
+      .automatic1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 20px;
+      }
+      .automatic2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 20px;
+      }
+      .automatic3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 20px;
+      }
+      .about {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        border: 2px black solid;
+        background-color: black;
+        padding: 50px;
+      }
+      .title1 {
+        height: 1px;
+        width: 500px;
+        background-color: grey;
+      }
+      .title2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .app1 {
+        font-size: 18px;
+        color: white;
+      }
+      .apps {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 500px;
+        padding: 30px;
+        padding-right: 300px;
+        background-color: black;
+        border-top: 1px grey solid;
+      }
+      .applist {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: start;
+        gap: 25px;
+        color: white;
+        font-size: 30px;
+      }
+      .system {
+        height: 750px;
+        width: 1500px;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.626),
+            rgba(128, 128, 128, 0.47)
+          ),
+          url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiWdsJ7T8HzE8aTksvbgKN8o4LIb6YhdozjF3aR5YSow0D1ZIPr3GQtJzM_EOb6eUvugv4vfxGxZHH-CAavGmK7JIbzkdhvJGMr4gjn8GdCgcR-DzvYHlipyVJfzcufOSNJrvHUsdyhM6acw29zRTVxMJBE8LgrkLSqFXyMM3or-Yvmoe2htnVZs2TD6g/s1600/117446577.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .system2 {
+        font-size: 30px;
+        position: absolute;
+        bottom: 300px;
+        left: 100px;
+        color: white;
+      }
+      .system3 {
+        font-size: 20px;
+        position: absolute;
+        bottom: 270px;
+        left: 100px;
+        border: 1px white solid;
+        width: 120px;
+        text-align: center;
+        border-radius: 10px;
+        background-color: white;
+      }
+      .system4 {
+        position: absolute;
+        bottom: 130px;
+        right: 80px;
+        background: none;
+      }
+      #font {
+        font-size: 60px;
+        color: white;
+        border: 1px green solid;
+        background-color: green;
+        border-radius: 10px;
+        position: fixed;
+      }
+      .home1{
+        cursor: pointer;
+        position: relative;
+      }
+      .home1::before{
+        content: "";
+        width: 100%;
+        background-color: #f1722d;
+        height: 3px;
+        position: absolute;
+        bottom: -7px;
+        transform: scale(0);
+        transition: transform 3s;
+      }
+      .home1:hover::before{
+        transform: scale(1);
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="navaradhi">
+      <div class="navaradhi1">
+        <img
+          src="https://navaradhi.com/wp-content/uploads/2021/04/logo.png"
+          alt="logo"
+          width="100px"
+          height="100px"
+        />
+      </div>
+      <div>
+        <div class="home">
+            <div class="home1">HOME</div>
+            <div class="home1">POINT OF SALE SOLUTIONS</div>
+            <div class="home1">HOME AUTOMATION</div>
+            <div class="home1">PARTNERS</div>
+            <div class="home1">CONTACT US</div>
+        </div>
+      </div>
+      <div class="space">
+        <i id="icon" class="fa-solid fa-magnifying-glass"></i>
+        <input
+          class="input"
+          type="text"
+          placeholder="Searching for"
+          autofoucs
+        />
+      </div>
+    </div>
+
+    <div class="system"></div>
+    <div class="system1">
+      <div class="system2">Point of sale solutions</div>
+      <div class="system3">click here</div>
+      <div class="system4">
+        <abbr title="whatsup status">
+          <i id="font" class="fa-brands fa-whatsapp"></i>
+        </abbr>
+      </div>
+    </div>
+
+    <div class="solution">
+      <div class="solution1">
+        <img
+          src="https://navaradhi.com/wp-content/uploads/2021/04/c2.jpg"
+          alt="image"
+          height="600px"
+          width="650px"
+        />
+        <div class="sol">POS SOLUTIONS</div>
+      </div>
+      <div class="solution2">
+        <div>
+          <img
+            src="https://navaradhi.com/wp-content/uploads/2021/04/c3.jpg"
+            alt="image"
+            height="600px"
+            width="650px"
+          />
+          <div class="sol2">HOME AUTOMATION</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="title">
+      <div class="title2">
+        <div class="title1"></div>
+        <div class="block-title">POINT OF SALE SOLUTIONS</div>
+        <div class="title1"></div>
+      </div>
+      <div class="hotel">
+        <div>
+          <img
+            src="https://navaradhi.com/wp-content/uploads/2021/04/pocket.jpg"
+            alt="image"
+            height="300px"
+            width="250px"
+          />
+          <div class="hotel1">Poket POS</div>
+        </div>
+        <div>
+          <img
+            src="https://navaradhi.com/wp-content/uploads/2021/04/2-1.jpg"
+            alt="image"
+            height="300px"
+            width="250px"
+          />
+          <div class="hotel1">Hotel Manager POS</div>
+        </div>
+        <div>
+          <img
+            src="https://navaradhi.com/wp-content/uploads/2021/04/mms-1.jpg"
+            alt="image"
+            height="300px"
+            width="250px"
+          />
+          <div class="hotel1">Accware stores MMS</div>
+        </div>
+        <div>
+          <img
+            src="https://navaradhi.com/wp-content/uploads/2021/04/3-2.jpg"
+            alt="image"
+            height="300px"
+            width="250px"
+          />
+          <div class="hotel1">Hotel Manager PMS</div>
+        </div>
+        <div>
+          <img
+            src="https://navaradhi.com/wp-content/uploads/2021/04/5-1.jpg"
+            alt="image"
+            height="300px"
+            width="250px"
+          />
+          <div class="hotel1">Shop Keeper</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sale5">
+      <div>
+        <img
+          src="https://navaradhi.com/wp-content/uploads/2021/04/pos-main.jpg"
+          alt="image"
+          height="350px"
+          width="600px"
+        />
+      </div>
+      <div class="sales">
+        <div class="sale1">Point of Sale Solutions</div>
+        <div class="sale2">
+          Because every business is different, Navaradhi has a variety of POS
+          options to help you take yours where<br />
+          you want it to go. Whether you run a restaurant, sell retail goods,
+          propriety management, or just need a<br />
+          versatile POS for whatever comes next, we have the point-of-sale
+          software and POS hardware that will<br />
+          best support you and your unique business needs.
+        </div>
+      </div>
+    </div>
+
+    <div class="auto">
+      <div class="auto1">
+        <div class="sale1">Home Automation</div>
+        <div class="sale2">
+          At Navaradhi, we are building Home Automation solutions flavored with
+          convenience, accessibility and<br />
+          compatibility. We strive to make customized solutions that are
+          cost-effective, smarter and reliable,<br />
+          thereby enhancing the way people live. As we grew with multiple
+          projects, we found a significant gap<br />
+          between products and user experience. We felt multiple controllers for
+          multiple devices are making the<br />
+          automation systems inelastic, causing an inconvenience. This led us to
+          a concept of having ‘One<br />
+          controller’ for all devices which will makes the whole automation
+          network faster, flexible and customized.
+        </div>
+      </div>
+      <div>
+        <img
+          src="https://navaradhi.com/wp-content/uploads/2021/04/home.jpg"
+          alt="image"
+          height="350px"
+          width="600px"
+        />
+      </div>
+    </div>
+
+    <div class="vedio">
+      <iframe
+        width="1400"
+        height="787"
+        src="https://www.youtube.com/embed/USiY6iumvXo"
+        title="Milan Home Automation Demo | Smart Homes"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <div class="customers">
+      <div class="custom1">
+        <div>OUR HAPPY CUSTOMERS</div>
+        <div class="underline"></div>
+      </div>
+      <div class="custom4">
+        <div class="custom3">
+          <img
+            src="https://navaradhi.com/wp-content/uploads/2021/04/51.png"
+            alt="image"
+            width="200px"
+            height="150px"
+          />
+        </div>
+        <div class="custom3">
+          <img
+            src="https://navaradhi.com/wp-content/uploads/2021/04/55.png"
+            alt="image"
+            width="200px"
+            height="150px"
+          />
+        </div>
+        <div class="custom3">
+          <img
+            src="https://navaradhi.com/wp-content/uploads/2021/04/57.png"
+            alt="image"
+            width="200px"
+            height="150px"
+          />
+        </div>
+        <div class="custom3">
+          <img
+            src="https://navaradhi.com/wp-content/uploads/2021/04/61.png"
+            alt="image"
+            width="200px"
+            height="150px"
+          />
+        </div>
+        <div class="custom3">
+          <img
+            src="https://navaradhi.com/wp-content/uploads/2021/04/62.png"
+            alt="image"
+            width="200px"
+            height="150px"
+          />
+        </div>
+        <div class="custom3">
+          <img
+            src="https://navaradhi.com/wp-content/uploads/2021/04/5.png"
+            alt="image"
+            width="200px"
+            height="150px"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonials">
+      <div class="testimonials1"></div>
+      <div class="testimonials2">TESTIMONIALS</div>
+      <div class="testimonials1"></div>
+    </div>
+
+    <div class="starscomplete">
+      <div class="stars10">
+        <div class="star">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="star1">
+          "EXLENT BILLING SOFTWARE WITH GOOD SERVICES......"
+        </div>
+        <div>
+          <img
+            class="starpick"
+            src="https://navaradhi.com/wp-content/uploads/2021/04/t1.jpg"
+            alt="image"
+            height="100px"
+            width="120px"
+          />
+        </div>
+      </div>
+
+      <div class="stars20">
+        <div class="star">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="star11">"Best point of sales solution provider...."</div>
+        <div>
+          <img
+            class="starpick"
+            src="https://navaradhi.com/wp-content/uploads/2021/04/t2.jpg"
+            alt="image"
+            height="100px"
+            width="120px"
+          />
+        </div>
+      </div>
+
+      <div class="stars30">
+        <div class="star">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="star11">"Providing Good Service......"</div>
+        <div>
+          <img
+            class="starpick"
+            src="https://navaradhi.com/wp-content/uploads/2021/04/t3.jpg"
+            alt="image"
+            height="100px"
+            width="120px"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="quick">
+      <div class="quick1">
+        Enquire Us to find out more or how we can help you better.
+      </div>
+      <div class="quick2">Quick Enquiry</div>
+    </div>
+
+    <div class="about">
+      <div class="automatic1">
+        <div class="about10">About</div>
+        <div class="about2">
+          <div>
+            Established in 2005, we are one of the leading company in
+            Andhrapradesh. we work as a team with well
+          </div>
+          <div>
+            trained and exclusive team for each product to reach the client for
+            better service. Our Professionals
+          </div>
+          <div>
+            assist in handling projects right from planning to implementation.
+            High quality and customer satisfaction
+          </div>
+          <div>
+            is the motto of or company and we are constantly striving to achieve
+            it. We have collaborations with well-
+          </div>
+          <div>
+            known and eminent brands which enable us to offer services within
+            the stipulated time frame. We offer
+          </div>
+          <div>
+            various dynamic and flexible solutions which can suit to a vast
+            range of clientele, as per their need and
+          </div>
+          <div>budget.</div>
+        </div>
+      </div>
+
+      <div class="automatic2">
+        <div class="about10">Point of sale solutions</div>
+        <div class="about2">
+          <div>Android POS Software</div>
+          <div>Windows POS Software</div>
+          <div>Android Handheld Machines</div>
+          <div>Android Touch POS Machines</div>
+          <div>Windows Touch POS Machines</div>
+          <div>POS Thermal Printers</div>
+          <div>Mobile POS Thermal Printers</div>
+          <div>Barcode Printers</div>
+        </div>
+      </div>
+      <div class="automatic3">
+        <div class="about10">Home Automation</div>
+        <div class="about2">
+          <div>Home Automation</div>
+          <div>Smart Solutions</div>
+          <div>Home Theatre Systems</div>
+          <div>Surveillance & Security</div>
+          <div>Biometric and Access Control</div>
+          <div>Anywhere Intercom</div>
+          <div>Networking System</div>
+          <div>Central Vacuum System</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="apps">
+      <div>
+        <div class="app1">©2021 Navaradhi.com. All rights reserved.</div>
+      </div>
+      <div class="applist">
+        <i id="apps10" class="fa-brands fa-facebook"></i>
+        <i id="apps10" class="fa-brands fa-twitter"></i>
+        <i id="apps10" class="fa-brands fa-youtube"></i>
+        <i id="apps10" class="fa-brands fa-linkedin"></i>
+        <i id="apps10" class="fa-brands fa-instagram"></i>
+        <i id="apps10" class="fa-brands fa-pinterest"></i>
+        <i id="apps10" class="fa-brands fa-telegram"></i>
+      </div>
+    </div>
+  </body>
+</html>
